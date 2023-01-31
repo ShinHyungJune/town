@@ -65,6 +65,126 @@ html {
     position:absolute; left:50%; top:50%; transform:translate(-50%, -50%);
 }
 
+.m-header.type02 {
+    width:100%; max-width:500px; height:74px;
+    position:fixed; top:0; left:50%; transform:translateX(-50%);
+    border-bottom:1px solid #e1e1e1;
+    background-color:#fff;
+    z-index:10;
+}
+.m-header.type02 .wrap {
+    display:flex; align-items: center; justify-content: space-between;
+    width:100%; height:100%;
+}
+.m-header.type02 .title {
+    font-size:20px; font-weight:500;
+}
+.m-histories.type01 {
+    position:relative;
+}
+.m-histories.type01:before {
+    content:"";
+    width:2px; height:98.2%;
+    position:absolute; left:0; top:14px;
+    background-color:#DEDEDE;
+}
+.m-histories.type01 .history {
+    margin-bottom:28px; padding-left:24px;
+}
+.m-histories.type01 .history .title {
+    margin-bottom:4px; position:relative;
+    font-size:22px; font-weight:bold; word-break: keep-all;
+}
+.m-histories.type01 .history .title:before {
+    content:"";
+    width:14px; height:14px;
+    position:absolute; left:-30px; top:50%; transform: translateY(-50%);
+    background:url("../images/deco-history.png") no-repeat; background-size:100%;
+}
+.m-histories.type01 .history .body {
+    font-size:16px; word-break: keep-all;
+}
+.m-histories.type01 .history:last-of-type {
+    margin-bottom:0;
+}
+.m-comment.type01 {
+    padding:30px 16px;
+    font-size:20px; text-align: center;
+    background-color:#F5F5F5; border-radius:5px;
+}
+.m-comment.type01 .point {
+    font-size:20px; font-weight:bold;
+}
+.m-center.type01 {
+    display:flex; align-items: center;
+    height:calc(100vh - 180px);
+}
+.m-center.type01 .wrap {
+    width:100%;
+}
+
+.area-login .links {
+    margin-top:10px;
+    text-align:right;
+}
+.area-login .links .link {
+    font-size:22px; font-weight:500;
+}
+.area-login .m-input-wrap {
+    margin-bottom:8px;
+}
+.area-login .m-input-checkbox {
+    margin-bottom:16px;
+}
+.area-login .m-input-checkbox label {
+    color:#777777;
+}
+.area-login .logo {
+    display:block; margin:0 auto;
+    margin-bottom:40px;
+}
+.area-login .m-header.type02 {
+    border-bottom:none;
+}
+.area-login .wrap > .title {
+    margin-bottom:20px;
+    font-size:24px; font-weight:500;
+}
+.area-about img {
+    max-width:100%;
+}
+.area-about .m-title {
+    margin:32px 0; margin-bottom:24px;
+    text-align: center;
+}
+.area-register-checkPolicy .comment {
+    padding:10px; border-radius:5px;
+    background-color:#F5F5F5;
+    text-align: center;
+}
+.area-register-checkPolicy .comment .point {
+    text-decoration: underline; color:#0BAF00;
+}
+.area-register-success .img {
+    max-width:100%;
+}
+.area-register-success .wrap > .title {
+    font-size:24px; font-weight:bold; word-break: keep-all;
+}
+.m-visual.type01 {
+    padding:47px 10px;
+    background-color:#F7F7F7; text-align: center;
+}
+.m-visual.type01 .subtitle {
+    margin-bottom:8px;
+    font-size:18px; font-weight:500; color:#777;
+}
+.m-visual.type01 .title {
+    font-size:30px; font-weight:bold; font-family:GmarketSans;
+}
+.m-visual.type01 .title .point {
+    font-size:30px; font-weight:bold; font-family:GmarketSans; color:#0BAF00;
+}
 .area-index .m-header.type01 {
     border-bottom:none
 }
@@ -305,15 +425,27 @@ html {
     padding:8px 8px; font-weight:500;
 }
 .m-tabs.type01 {
-    display:flex; flex-wrap:wrap; margin:-4px;
+    display:flex; flex-wrap:wrap;
+    padding:0 16px;
 }
 .m-tabs.type01 .m-tab-wrap {
-    width:25%; padding:4px;
+    flex:1;
 }
 .m-tabs.type01 .m-tab {
     display:flex; align-items: center; justify-content: center;
-    height:32px;
-    font-size:14px; color:#C1C1C1; border:1px solid #E4E4E4; border-radius:16px;
+    padding:10px 0;
+}
+.m-tabs.type01 .m-tab .text {
+    position:relative;
+    font-size:16px; font-weight:500; color:#7777;
+}
+.m-tabs.type01 .m-tab.active .text {
+    color:#0BAF00;
+}
+.m-tabs.type01 .m-tab.active .text:after {
+    content:""; width:100%; height:2px;
+    position:absolute; bottom:-4px; left:50%; transform:translateX(-50%);
+    background-color:#0BAF00;
 }
 
 .m-divide.type01 {
@@ -323,16 +455,20 @@ html {
 .mt-40 {
     margin-top:40px;
 }
-
+.mt-32 {
+    margin-top:30px;
+}
 .mt-16 {
     margin-top:16px;
 }
-
 .mt-12 {
     margin-top:12px;
 }
 .mt-8 {
     margin-top:8px;
+}
+.mt-4 {
+    margin-top:4px;
 }
 
 .m-swiper-pagination.type01 {
@@ -354,6 +490,7 @@ html {
 .mt-16 {
     margin-top:16px;
 }
+.width-100 {width:100%;}
 .m-btns.type01 {
     display:flex; flex-wrap:wrap;
     margin:-6px;
@@ -375,10 +512,11 @@ html {
 .m-btn.type02 {
     display:flex; align-items: center; justify-content: center;
     height:50px; padding:0 4px;
-    font-weight:bold; font-size:22px;
+    font-weight:500; font-size:22px;
     background-color:#0BAF00; color:#fff; border-radius:5px;
     border:1px solid transparent;
 }
+
 .m-btn.type01.type-revert {
     border-color:#F88600; color:#F88600; background-color:#fff;
 }
@@ -425,9 +563,70 @@ html {
 
 .m-input-text input {display:block; width:100%;}
 .m-input-text.type01 {position:relative;}
-.m-input-text.type01 input {width:100%; height:37px; padding:0px 13px; font-size:14px; border:1px solid #e1e1e1; border-radius:5px; background-color:#fafafa;}
+.m-input-text.type01 input {
+    width:100%; height:50px; padding:0px 16px;
+    font-size:18px; border-radius:5px; background-color:#EEEEEE;
+}
 .m-input-text.type01 input[type="date"] {height:auto; padding:0px 13px; background-color:#fff !important;}
 .m-input-text.type01 .m-input-text-deco {position:absolute; right:20px; top:50%; transform:translateY(-50%); color:#979797; font-size:14px;}
+
+input[type="checkbox"] {display:none;}
+.m-input-title.type01 {
+    margin-bottom:8px;
+    font-size:18px;
+}
+.m-input-checkbox.type01 {
+    display:flex;
+    position:relative;
+}
+.m-input-checkbox.type01 label {
+    display: flex; align-items: center; justify-content: space-between;
+    width: 100%;
+    padding-left:24px;
+    font-size:18px; word-break: keep-all;
+}
+.m-input-checkbox.type01 label .link {
+    font-size:14px;
+}
+.m-input-checkbox.type01 label:before {
+    content:""; width:16px; height:16px;
+    position:absolute; left:0; top:7px;
+    background:url("../images/checkbox-inactive.png") no-repeat; background-size:100%;
+}
+.m-input-checkbox.type01 input:checked + label:before {
+    background:url("../images/checkbox-active.png") no-repeat; background-size:100%;
+}
+
+.m-input-textarea.type01 textarea {
+    padding:8px; max-height:175px; overflow-y:auto;
+    white-space: pre-line; font-size:14px;
+    border:1px solid #e1e1e1; border-radius:5px;
+}
+.m-input-textarea.type01 .fake {
+    padding:8px; max-height:175px; overflow-y:auto;
+    white-space: pre-line; font-size:14px;
+    border:1px solid #e1e1e1; border-radius:5px;
+}
+
+label {
+    cursor:pointer;
+}
+.m-input-checkboxes.type01 {
+    display:flex; width: 100%;
+    border-radius:5px; overflow:hidden;
+}
+.m-input-checkboxes.type01 .m-input-checkbox {
+    flex:1;
+}
+.m-input-checkboxes.type01 label {
+    display: flex; align-items: center; justify-content: center;
+    height:50px;
+    font-size:18px;
+    background-color:#EEEEEE; color:#777777;
+}
+.m-input-checkboxes.type01 input:checked + label {
+    background-color:#0BAF00; color:#fff;
+}
 
 .m-input-select.type01  {
     cursor:pointer;
@@ -449,6 +648,30 @@ html {
     border-radius:5px;
     font-weight:500;
 }
-.m-input-select.type01:after {content:""; width:10px; height:5px; position:absolute; right:30px; top:50%;
+.m-input-select.type01:after {content:""; width:10px; height:6px; position:absolute; right:30px; top:50%;
     transform:translateY(-50%); background:url("../images/chevron-down.png") no-repeat; background-size:10px auto;}
 .m-input-select.type01 select::-ms-expand { display: none; }
+
+.m-input-select.type01  {
+    cursor:pointer;
+    border-radius:0; /* 아이폰 사파리 보더 없애기 */
+    -webkit-appearance: none; /* 화살표 없애기 for chrome*/
+    -moz-appearance: none; /* 화살표 없애기 for firefox*/
+    appearance: none;
+    position:relative;
+}
+.m-input-select.type01::-ms-expand { display: none; }
+
+.m-input-select.type02 {position:relative;}
+.m-input-select.type02 select {width:100%; height:50px; padding:0px 16px; padding-right:60px;  background-color:#EEEEEE;
+    cursor:pointer;
+    border-radius:0; /* 아이폰 사파리 보더 없애기 */
+    -webkit-appearance: none; /* 화살표 없애기 for chrome*/
+    -moz-appearance: none; /* 화살표 없애기 for firefox*/
+    appearance: none;
+    border-radius:5px;
+    font-weight:500;
+}
+.m-input-select.type02:after {content:""; width:10px; height:6px; position:absolute; right:16px; top:50%;
+    transform:translateY(-50%); background:url("../images/chevron-down.png") no-repeat; background-size:10px auto;}
+.m-input-select.type02 select::-ms-expand { display: none; }
