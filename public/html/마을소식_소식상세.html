@@ -18,6 +18,65 @@
 <body>
 <div id="app">
     <div class="area-news-show">
+        <!-- 지갑 팝업 -->
+        <div class="m-pop type01" id="pop1">
+            <div class="m-pop-inner">
+                <button class="btn-close m-script-pop" data-target="#pop1">
+                    <img src="../images/x.png" alt="" style="width:21px;">
+                </button>
+
+                <div class="m-pop-title">내 지갑에 추가</div>
+
+                <button type="button" class="m-btn type03 width-100">현지갑에 추가</button>
+                <div class="mt-4"></div>
+                <button type="button" class="m-btn type03 width-100 bg-revert-primary">지갑 선택하기</button>
+            </div>
+        </div>
+
+        <!-- 신고 팝업 -->
+        <div class="m-pop type01" id="pop2">
+            <div class="m-pop-inner">
+                <button class="btn-close m-script-pop" data-target="#pop2">
+                    <img src="../images/x.png" alt="" style="width:21px;">
+                </button>
+
+                <div class="m-pop-title">게시물 신고</div>
+
+                <div class="m-input-checkbox type01">
+                    <input type="checkbox">
+                    <label for="">음란 콘텐츠를 유포</label>
+                </div>
+                <div class="mt-4"></div>
+                <div class="m-input-checkbox type01">
+                    <input type="checkbox">
+                    <label for="">상품을 팔거나 광고 및 홍보활동</label>
+                </div>
+                <div class="mt-4"></div>
+                <div class="m-input-checkbox type01">
+                    <input type="checkbox">
+                    <label for="">비방이나 욕설, 타인의 명예를 훼손</label>
+                </div>
+                <div class="mt-4"></div>
+                <div class="m-input-checkbox type01">
+                    <input type="checkbox">
+                    <label for="">잠재적 위반 가능성</label>
+                </div>
+                <div class="mt-4"></div>
+                <div class="m-input-checkbox type01">
+                    <input type="checkbox" checked>
+                    <label for="">스팸 정보</label>
+                </div>
+                <!-- 스팸 정보 클릭시에만 노출 -->
+                <div class="m-input-textarea type01 mt-8">
+                    <textarea name="" id=""></textarea>
+                </div>
+
+                <div class="mt-20"></div>
+
+                <button type="button" class="m-btn type03 width-100">신고</button>
+            </div>
+        </div>
+
         <!-- 헤더영역 -->
         <div class="m-header type01">
             <div class="wrap">
